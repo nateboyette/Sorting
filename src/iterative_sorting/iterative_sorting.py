@@ -23,6 +23,15 @@ def selection_sort(arr):
 
 def bubble_sort(arr):
 
+    for i in range(0, len(arr)):
+        for j in range(i, len(arr)):
+            if arr[i] > arr[j]:
+                temp = arr[j]
+                arr[j] = arr[i]
+                arr[i] = temp
+            else:
+                pass
+
     return arr
 
 
@@ -35,4 +44,4 @@ def count_sort(arr, maximum=-1):
 arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
 
 
-print(selection_sort(arr1))
+print(bubble_sort(arr1))
